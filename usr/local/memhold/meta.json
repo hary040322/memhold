@@ -1,0 +1,7 @@
+{ 
+    "name": "memhold", 
+    "config_items" : [
+      {"name": "MemMax", "type":"string", "require": true},
+      {"name": "SecStep", "type":"string", "require": true}
+    ]
+}

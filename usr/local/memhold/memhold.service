@@ -1,0 +1,18 @@
+[Unit]
+Description=Run cassia feature after container start initd
+Documentation=https://github.com/CassiaNetworks/CassiaSDKGuide/wiki
+After=network.target auditd.service
+
+[Service]
+ExecStart=/usr/local/memhold/blloc
+Type=simple
+KillMode=process
+Environment=MEM_HOLD_MB=113
+Restart=always
+RestartSec=20
+StartLimitInterval=20
+StartLimitBurst=20
+
+[Install]
+WantedBy=multi-user.target
+Alias=memhold.service
